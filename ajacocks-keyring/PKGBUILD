@@ -1,6 +1,6 @@
-# Contributor: James C Kimble <me@ajacocks.com>
+# Maintainer: Alexander Jacocks <alexander@redhat.com>
+# Contributor: James C Kimble <me@jckimble.com>
 pkgname=ajacocks-keyring
-#pkgver=20220819162816
 pkgver=20231017083458
 pkgrel=1
 pkgdesc="Keyring"
