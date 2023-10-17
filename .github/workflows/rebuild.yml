@@ -76,6 +76,9 @@ jobs:
       with:
         submodules: recursive
         ref: master
+    - run: git branch   # gives 'main' branch
+    - run: ls -al  # just files in 'main'. README, etc.
+    - run: id
     - name: Build ${{ matrix.package }}
       uses: ./.github/actions/archlinux
       env:
