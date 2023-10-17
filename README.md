@@ -8,9 +8,9 @@ Use GitHub Actions for building and packaging a few [AUR](https://aur.archlinux.
 To use as custom repository in [Arch Linux](https://www.archlinux.org), add to file `/etc/pacman.conf`:
 
 ```
-[jckimble]
+[ajacocks]
 SigLevel = Optional TrustAll
-Server = https://github.com/jckimble/pkgbuilds/releases/download/repository
+Server = https://github.com/ajacocks/pkgbuilds/releases/download/repository
 ```
 
 ## Customizing
