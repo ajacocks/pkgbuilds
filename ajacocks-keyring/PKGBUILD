@@ -1,0 +1,23 @@
+# Contributor: James C Kimble <me@ajacocks.com>
+pkgname=ajacocks-keyring
+#pkgver=20220819162816
+pkgver=20231017083458
+pkgrel=1
+pkgdesc="Keyring"
+arch=(any)
+url="https://github.com/ajacocks/pkgbuilds"
+license=('ISC')
+source=(public.gpg)
+sha256sums=(SKIP)
+depends=()
+
+pkgver() {
+  date --date "`git log -1 --pretty=\"format:%ci" public.gpg`" +%Y%m%d%H%M%S
+}
+
+package() {
+  install=ajacocks-keyring.install
+  depends=(pacrepo-cli)
+  install -dm 7555 "${pkgdir}/usr/share/ajacocks-keyring"
+	install -Dm755 "public.gpg" "${pkgdir}/usr/share/ajacocks-keyring/public.gpg"
+}
